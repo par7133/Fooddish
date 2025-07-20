@@ -422,15 +422,15 @@
  function renderCorrectPag () {
       if (window.innerWidth <= 500) {
          if (<?PHP echo($MAXP) ?>!=<?PHP echo(APP_BLOG_ULTRATHIN_MAX_POSTS) ?>) {
-             window.open("/<?PHP echo(AVATAR_NAME);?>/?maxp=<?PHP echo(APP_BLOG_ULTRATHIN_MAX_POSTS) ?>&place=<?PHP echo($cbPlace);?>","_self");
+             window.open("/<?PHP echo(AVATAR_NAME);?>/?maxp=<?PHP echo(APP_BLOG_ULTRATHIN_MAX_POSTS) ?>&place=<?PHP echo($cbPlace);?>&hl=<?PHP echo($lang);?>","_self");
           }   
       } else if (window.innerWidth <= 1050) {
           if (<?PHP echo($MAXP) ?>!=<?PHP echo(APP_BLOG_THIN_MAX_POSTS) ?>) {
-             window.open("/<?PHP echo(AVATAR_NAME);?>/?maxp=<?PHP echo(APP_BLOG_THIN_MAX_POSTS) ?>&place=<?PHP echo($cbPlace);?>","_self");
+             window.open("/<?PHP echo(AVATAR_NAME);?>/?maxp=<?PHP echo(APP_BLOG_THIN_MAX_POSTS) ?>&place=<?PHP echo($cbPlace);?>&hl=<?PHP echo($lang);?>","_self");
           }  
       } else {
           if (<?PHP echo($MAXP) ?>!=<?PHP echo(APP_BLOG_WIDE_MAX_POSTS) ?>) {
-             window.open("/<?PHP echo(AVATAR_NAME);?>/?maxp=<?PHP echo(APP_BLOG_WIDE_MAX_POSTS) ?>&place=<?PHP echo($cbPlace);?>","_self");
+             window.open("/<?PHP echo(AVATAR_NAME);?>/?maxp=<?PHP echo(APP_BLOG_WIDE_MAX_POSTS) ?>&place=<?PHP echo($cbPlace);?>&hl=<?PHP echo($lang);?>","_self");
           }  
       }
  }
@@ -744,17 +744,17 @@
                                       <?php if ($iCurEntry===1 && $iEntry===1): ?>
                                        <!--<img class="blog-img" src="/res/arrow-leftd.png" style="float:left;">-->
                                        <?php elseif ($iEntry===1 && $iCurEntry>1): ?>  
-                                       <a href="/<?PHP echo(AVATAR_NAME); ?>/?blogSP=<?PHP echo($prevPost);?>&maxp=<?PHP echo($MAXP)?>&place=<?PHP echo($cbPlace);?>" onclick="event.stopPropagation();"><img class="blog-img" src="/res/arrow-left.png" style="float:left;"></a>
+                                       <a href="/<?PHP echo(AVATAR_NAME); ?>/?blogSP=<?PHP echo($prevPost);?>&maxp=<?PHP echo($MAXP)?>&place=<?PHP echo($cbPlace);?>&hl=<?PHP echo($lang);?>" onclick="event.stopPropagation();"><img class="blog-img" src="/res/arrow-left.png" style="float:left;"></a>
                                        <?php endif; ?>
                                        <?php if ($iEntry===$MAXP && $iCurEntry===$totPost): ?>
                                        <!--<img class="blog-img" src="/res/arrow-rightd.png" style="float:right;">-->
                                        <?php elseif ($iEntry===$MAXP): ?>
                                           <?PHP if ($MAXP===APP_BLOG_ULTRATHIN_MAX_POSTS): ?> 
-                                            <div style="float:right;position: absolute;top:+40%;left:+85%; opacity:0.85;"><a href="/<?PHP echo(AVATAR_NAME); ?>/?blogSP=<?PHP echo($nextPost);?>&maxp=<?PHP echo($MAXP);?>&place=<?PHP echo($cbPlace);?>" onclick="event.stopPropagation();"><img class="blog-img" src="/res/arrow-right.png" style="float:right;"></a></div>
+                                            <div style="float:right;position: absolute;top:+40%;left:+85%; opacity:0.85;"><a href="/<?PHP echo(AVATAR_NAME); ?>/?blogSP=<?PHP echo($nextPost);?>&maxp=<?PHP echo($MAXP);?>&place=<?PHP echo($cbPlace);?>&hl=<?PHP echo($lang);?>" onclick="event.stopPropagation();"><img class="blog-img" src="/res/arrow-right.png" style="float:right;"></a></div>
                                           <?PHP elseif ($MAXP===APP_BLOG_THIN_MAX_POSTS): ?>   
-                                            <div style="float:right;position: absolute;left:+62%; opacity:0.85;"><a href="/<?PHP echo(AVATAR_NAME); ?>/?blogSP=<?PHP echo($nextPost);?>&maxp=<?PHP echo($MAXP)?>&place=<?PHP echo($cbPlace);?>" onclick="event.stopPropagation();"><img class="blog-img" src="/res/arrow-right.png" style="float:right;"></a></div>                                          
+                                            <div style="float:right;position: absolute;left:+62%; opacity:0.85;"><a href="/<?PHP echo(AVATAR_NAME); ?>/?blogSP=<?PHP echo($nextPost);?>&maxp=<?PHP echo($MAXP)?>&place=<?PHP echo($cbPlace);?>&hl=<?PHP echo($lang);?>" onclick="event.stopPropagation();"><img class="blog-img" src="/res/arrow-right.png" style="float:right;"></a></div>                                          
                                           <?PHP else: ?>                                            
-                                            <div style="float:right;position: absolute;left:+52%; opacity:0.85;"><a href="/<?PHP echo(AVATAR_NAME); ?>/?blogSP=<?PHP echo($nextPost);?>&maxp=<?PHP echo($MAXP)?>&place=<?PHP echo($cbPlace);?>" onclick="event.stopPropagation();"><img class="blog-img" src="/res/arrow-right.png" style="float:right;"></a></div>
+                                            <div style="float:right;position: absolute;left:+52%; opacity:0.85;"><a href="/<?PHP echo(AVATAR_NAME); ?>/?blogSP=<?PHP echo($nextPost);?>&maxp=<?PHP echo($MAXP)?>&place=<?PHP echo($cbPlace);?>&hl=<?PHP echo($lang);?>" onclick="event.stopPropagation();"><img class="blog-img" src="/res/arrow-right.png" style="float:right;"></a></div>
                                           <?php endif; ?>  
                                        <?php endif; ?>
                                  <?PHP else: ?>
@@ -762,10 +762,10 @@
                                  <?PHP endif; ?>      
                                  <?PHP
                                     echo "<div style='position:relative;top:0px;text-align:right;padding-right:1.5px;'>";
-                                    echo "<a href=\"#\" onclick=\"selectVideo(" . ($iEntry-1) .";\" title=\"View this food...\"><img src='/res/view.png'></a>";
-                                    echo "<a href=\"https://www.facebook.com/sharer/sharer.php?u=http://" . APP_HOST . "/img?av=" . AVATAR_NAME . urlencode("&pic=") . urlencode($orifilename) . "&t=\" onclick=\"javascript:event.stopPropagation(); window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;\" target=\"_blank\" title=\"Share on Facebook\"><img src='/res/fb.png'></a>";
-                                    echo "<a href=\"https://twitter.com/share?url=http://" . APP_HOST . "/img?av=" . AVATAR_NAME . urlencode("&pic=") . urlencode($orifilename) . "&text=\" onclick=\"javascript:event.stopPropagation(); window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;\" target=\"_blank\" title=\"Share on Twitter\"><img src='/res/twitter.png'></a>";
-                                    echo "<a href=\"whatsapp://send?text=http://" . APP_HOST . "/img?av=" . AVATAR_NAME . urlencode("&pic=") . urlencode($orifilename) . "\" data-action=\"share/whatsapp/share\" onclick=\"javascript:event.stopPropagation(); window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;\" target=\"_blank\" title=\"Share on whatsapp\"><img src='/res/whatsapp.png'></a>";
+                                    echo "<a href=\"#\" onclick=\"selectVideo(" . ($iEntry-1) .";\" title=\"" . getResource0("View this food..", $lang) . "\"><img src='/res/view.png'></a>";
+                                    echo "<a href=\"https://www.facebook.com/sharer/sharer.php?u=http://" . APP_HOST . "/img?av=" . AVATAR_NAME . urlencode("&pic=") . urlencode($orifilename) . "&t=\" onclick=\"javascript:event.stopPropagation(); window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;\" target=\"_blank\" title=\"" . getResource0("Share on Facebook", $lang) . "\"><img src='/res/fb.png'></a>";
+                                    echo "<a href=\"https://twitter.com/share?url=http://" . APP_HOST . "/img?av=" . AVATAR_NAME . urlencode("&pic=") . urlencode($orifilename) . "&text=\" onclick=\"javascript:event.stopPropagation(); window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;\" target=\"_blank\" title=\"" . getResource0("Share on Twitter", $lang) . "\"><img src='/res/twitter.png'></a>";
+                                    echo "<a href=\"whatsapp://send?text=http://" . APP_HOST . "/img?av=" . AVATAR_NAME . urlencode("&pic=") . urlencode($orifilename) . "\" data-action=\"share/whatsapp/share\" onclick=\"javascript:event.stopPropagation(); window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;\" target=\"_blank\" title=\"" . getResource0("Share on Whats App", $lang) . "\"><img src='/res/whatsapp.png'></a>";
                                     echo "</div>";
                                  ?>
                            </div> 
