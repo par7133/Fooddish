@@ -203,7 +203,7 @@ function showEncodedPassword() {
 }
 
 function changeLang(tthis) {
-  window.open("/?hl="+$(tthis).val(),"_self");
+  window.open("/<?PHP echo($AVATAR_NAME);?>?hl="+$(tthis).val(),"_self");
 }
 
 function reload() {
