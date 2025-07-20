@@ -1,10 +1,10 @@
 <p align="center">
     <a href="#">
-        <img src="/Public/static/res/AFlogo.png" width="188" title="Puzzleu" alt="Puzzleu">
+        <img src="/Public/static/res/AFlogo.png" width="188" title="Fooddish!" alt="Fooddish!">
     </a>
 </p>
 
-# Fooddish
+# Fooddish!
 
 Hello and welcome to Fooddish!<br>
 	  
