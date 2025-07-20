@@ -34,10 +34,10 @@ To help please donate by clicking <a href="https://gaox.io/l/dona1">https://gaox
 
 ### Public view:
 
-![Fooddish in action #1](/Public/res/screenshot1.png)<br>
+![Fooddish in action #1](/Public/static/res/screenshot1.png)<br>
 
 ### Admin view:
 
-![Fooddish in action #2](/Public/res/screenshot2.png)<br>
+![Fooddish in action #2](/Public/static/res/screenshot2.png)<br>
 
 Feedback: <a href="mailto:code@gaox.io" style="color:#e6d236;">code@gaox.io</a>
