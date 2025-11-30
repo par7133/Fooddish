@@ -42,7 +42,7 @@ define('APP_TITLE', "Fooddish! Everyone its food!");
 define('APP_HASH', "");
 define('APP_SALT', "yoursalt");
 
-define('APP_HOST', "YourFooddish.com");
+define('APP_HOST', "yoursitename.xyz");
 define('APP_PATH', "/var/www/YourWebApp/Public");
 define('APP_HOME_PATH', "/var/www/YourWebApp/Public/home.php");
 define('APP_PRIVATE_PATH', "/var/www/YourWebApp/Private");
@@ -98,7 +98,7 @@ $CONFIG = [
       // salt: your_salt
       'HASH' => "",
       'SALT' => "yoursalt",        
-      'HOST' => "YourFooddish.com", 
+      'HOST' => "yoursitename.xyz", 
       'PATH' => "/var/www/YourWebApp/Public",
       'HOME_PATH' => "/var/www/YourWebApp/Public/home.php",
       'PRIVATE_PATH' => "/var/www/YourWebApp/Private", 
