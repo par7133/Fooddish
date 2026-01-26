@@ -446,9 +446,9 @@
 <?PHP endif; ?>
 
   <meta name="description" content="Welcome to Fooddish! Let everyone have its food."/>
-  <meta name="keywords" content="food,fooddish,on,premise,solution"/>
+  <meta name="keywords" content="food,fooddish,on,premise,solution,NuMode"/>
   <meta name="robots" content="index,follow"/>
-  <meta name="author" content="5 Mode"/>
+  <meta name="author" content="NuMode"/>
   
   <script src="/js/jquery-3.6.0.min.js" type="text/javascript"></script>
   <script src="/js/sha.js" type="text/javascript"></script>
@@ -595,7 +595,7 @@
  </form>   
            
   <div id="footerCont">&nbsp;</div>
-  <div id="footer"><span style="background:#FFFFFF; opacity:0.7;">&nbsp;&nbsp;<a class="aaa" href="dd.html">Disclaimer</a>.&nbsp;&nbsp;A <a href="http://5mode.com" class="aaa">5 Mode</a> project and <a href="http://demo.5mode.com" class="aaa">WYSIWYG</a> system. <?PHP echo(getResource0("Some rights reserved", $lang));?></span></div>
+  <div id="footer"><span style="background:#FFFFFF; opacity:0.7;">&nbsp;&nbsp;<a class="aaa" href="http://numode.eu/dd.html">Disclaimer</a>.&nbsp;&nbsp;A <a href="http://numode.eu" class="aaa">NuMode</a> project and <a href="http://demo.numode.eu" class="aaa">WYSIWYG</a> system. <?PHP echo(getResource0("Some rights reserved", $lang));?></span></div>
            
 <?PHP else: ?>          
 
