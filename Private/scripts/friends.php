@@ -67,9 +67,9 @@
   <link rel="shortcut icon" href="/favicon.ico" />
 
   <meta name="description" content="Welcome to Puzzleu! Let everyone have its puzzle."/>
-  <meta name="keywords" content="puzzleu,photo,puzzle,on,premise,solution"/>
+  <meta name="keywords" content="puzzleu,photo,puzzle,on,premise,solution,NuMode"/>
   <meta name="robots" content="index,follow"/>
-  <meta name="author" content="5 Mode"/>
+  <meta name="author" content="NuMode"/>
   
   <script src="/js/jquery-3.6.0.min.js" type="text/javascript"></script>
   <script src="/js/sha.js" type="text/javascript"></script>
@@ -224,7 +224,7 @@
         </select> 
     </div>
     <div id="footer2" style="float:right; width:450px;">
-        <span style="background:#FFFFFF; opacity:0.7;"><a id="fooddishlink" href="https://github.com/par7133/Fooddish/">Fooddish!</a>&nbsp;&nbsp;A <a href="http://5mode.com" class="aaa">5 Mode</a> project and <a href="http://demo.5mode.com" class="aaa">WYSIWYG</a> system. CC</span>
+        <span style="background:#FFFFFF; opacity:0.7;"><a id="fooddishlink" href="https://github.com/par7133/Fooddish/">Fooddish!</a>&nbsp;&nbsp;A <a href="http://numode.eu" class="aaa">NuMode</a> project and <a href="http://demo.numode.eu" class="aaa">WYSIWYG</a> system. CC</span>
     </div>
 
 <script>
