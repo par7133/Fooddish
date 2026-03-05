@@ -127,7 +127,7 @@
       
 <?PHP
 
-   $pattern = APP_DATA_PATH . DIRECTORY_SEPARATOR . AVATAR_NAME . DIRECTORY_SEPARATOR . "friends" . DIRECTORY_SEPARATOR . "*" . DIRECTORY_SEPARATOR  . "blog" . DIRECTORY_SEPARATOR . "*.jpg";
+   $pattern = APP_DATA_PATH . DIRECTORY_SEPARATOR . AVATAR_NAME . DIRECTORY_SEPARATOR . "friends" . DIRECTORY_SEPARATOR . "*" . DIRECTORY_SEPARATOR  . "blog" . DIRECTORY_SEPARATOR . "*";
    $aFiles = glob($pattern);
    
    if (empty($aFiles)) {
@@ -139,8 +139,12 @@
    $aFiles2 = [];
    
    foreach($aFiles as $path) {
-      $filename = basename($path);
-      $aFiles2[$filename] = $path;
+      $orifilename = basename($path);
+      $filename = explode("|", basename($path))[2];
+      $fileExt = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+      if ($fileExt === "jpg" || $fileExt === "png") {
+        $aFiles2[$orifilename] = $path;
+      }
    }
    
    krsort($aFiles2);

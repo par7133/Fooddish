@@ -640,15 +640,24 @@
    $totLinks = 0;
    $aLinks=[];
    if ($cbPlace === PHP_STR) {
-     $pattern = $BLOG_PATH . DIRECTORY_SEPARATOR . "*.jpg";
+     $pattern = $BLOG_PATH . DIRECTORY_SEPARATOR . "*";
    } else {
-     $pattern = $BLOG_PATH . DIRECTORY_SEPARATOR . "*|$cbPlace|*.jpg";
+     $pattern = $BLOG_PATH . DIRECTORY_SEPARATOR . "*|$cbPlace|*";
    }
-   $aFilePaths = glob($pattern);   
+   $aFilePaths = [];
+   $aFilePaths2 = glob($pattern);   
    $aPlaces = [];
-   foreach($aFilePaths as $filePath) {
-     $filename = explode("|", basename($filePath))[1];
-     $aPlaces[$filename] = $filename;
+   foreach($aFilePaths2 as $filePath) {
+     $place1 = explode("|", basename($filePath))[1];
+     //echo("%$place1%<br>");
+     $filename = explode("|", basename($filePath))[2];
+     //echo("#$filename#<br>");
+     $fileExt = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+     //echo("**$fileExt**<br>");
+     if ($fileExt === "jpg" || $fileExt === "png") {
+       $aPlaces[$filename] = $place1;
+       $aFilePaths[] = $filePath; 
+     }
    }
 
    //echo("<br>");
